@@ -154,7 +154,7 @@ public class RexxarWebViewClient extends WebViewClient {
                 try {
                     data = IOUtils.toString(cacheEntry.inputStream);
                     // hack 检查cache是否完整
-                    if (TextUtils.isEmpty(data) || !data.endsWith("</html>")) {
+                    if (TextUtils.isEmpty(data) || !data.trim().endsWith("</html>")) {
                         showError(RexxarWebViewCore.RxLoadError.HTML_CACHE_INVALID.type);
                         CacheHelper.getInstance().removeHtmlCache(requestUrl);
                     }
