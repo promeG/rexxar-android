@@ -41,6 +41,11 @@
         <activity android:name=".DemoActivity"
             android:screenOrientation="portrait" />
 
+        <activity android:name=".WebviewClientActivity"
+            android:screenOrientation="portrait" />
+
+
+
     </application>
 
 </manifest>

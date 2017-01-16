@@ -1,5 +1,7 @@
 package com.douban.rexxar.example;
 
+import com.douban.rexxar.resourceproxy.ResourceProxy;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -7,11 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.douban.rexxar.example.widget.AlertDialogWidget;
-import com.douban.rexxar.example.widget.TitleWidget;
-import com.douban.rexxar.example.widget.ToastWidget;
-import com.douban.rexxar.resourceproxy.ResourceProxy;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -66,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.rexxar_page: {
                 RexxarActivity.startActivity(this, "douban://douban.com/rexxar_demo");
+                //WebviewClientActivity.startActivity(this, "douban://douban.com/rexxar_demo");
                 return;
             }
             case R.id.partial_rexxar_page: {

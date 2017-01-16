@@ -1,12 +1,12 @@
 package com.douban.rexxar.example;
 
 
-import android.net.Uri;
-import android.util.Log;
-
 import com.douban.rexxar.resourceproxy.network.RexxarContainerAPI;
 
 import org.json.JSONObject;
+
+import android.net.Uri;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +26,7 @@ public class FrodoContainerAPIs {
     static {
         sAPIs.add(new LocationAPI());
         sAPIs.add(new LogAPI());
+        sAPIs.add(new CurrentMerchantApi());
     }
 
     static Response.Builder newResponseBuilder(Request request) {
@@ -35,6 +36,28 @@ public class FrodoContainerAPIs {
         responseBuilder.protocol(Protocol.HTTP_1_1);
         return responseBuilder;
     }
+
+    static class CurrentMerchantApi implements RexxarContainerAPI {
+
+        @Override
+        public String getPath() {
+            return "/id";
+        }
+
+        @Override
+        public Response call(Request request) {
+            Response.Builder responseBuilder = newResponseBuilder(request);
+            try {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("id", 2);
+                responseBuilder.body(ResponseBody.create(MediaType.parse(Constants.MIME_TYPE_JSON), jsonObject.toString()));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return responseBuilder.build();
+        }
+    }
+
 
     static class LocationAPI implements RexxarContainerAPI {
 
