@@ -7,8 +7,9 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.0'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.0.1"
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.1'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
     }
 }
 
@@ -35,4 +36,28 @@ ext {
     buildToolsVersion = "24.0.3"
     minSdkVersion = 14
     targetSdkVersion = 22
+
+    userName = 'PromeG'
+    developer = [
+            id   : 'promeg',
+            name : 'promeg',
+            email: 'gyacong@gmail.com'
+    ]
+    license = [
+            id  : 'MIT',
+            name: 'The MIT License (MIT)',
+            url : 'http://opensource.org/licenses/MIT'
+    ]
+    groupName = 'com.heylotus.rexxar'
+    artifactName = 'core'
+    artifactDescription = 'Mobile Hybrid Framework Rexxar Android Container'
+    artifactLabels = ['Hybrid', 'Rexxar', 'Android']
+    releaseVersionCode = 2
+    releaseVersionName = '0.2.1'
+
+    androidBuildToolsVersion = '25.0.0'
+    androidCompileSdkVersion = 24 // 25 源码还没出，设置为 25 会导致 IDE 看不到源码
+    androidMinSdkVersion = 15
+    androidTargetSdkVersion = 22
+    androidSupportSdkVersion = '25.0.0'
 }
