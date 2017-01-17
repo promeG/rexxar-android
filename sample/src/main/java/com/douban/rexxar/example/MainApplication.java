@@ -25,7 +25,7 @@ public class MainApplication extends Application {
 
     static final List<String> PROXY_HOSTS = new ArrayList<>();
     static {
-        PROXY_HOSTS.add("47.88.87.43");
+        PROXY_HOSTS.add("192.168.0.113:8888");
     }
 
     @Override

@@ -2,14 +2,14 @@
   "items": [
     {
       "deploy_time": "Sun, 09 Oct 2016 05:54:22 GMT",
-      "remote_file": "http://47.88.87.43/detail.html",
+      "remote_file": "http://192.168.0.113:8888/detail.html",
       "uri": "douban://douban.com/rexxar_demo[/]?.*"
     }
   ],
   "partial_items": [
     {
       "deploy_time": "Sun, 09 Oct 2016 05:54:22 GMT",
-      "remote_file": "http://47.88.87.43/detail.html",
+      "remote_file": "http://192.168.0.113:8888/detail.html",
       "uri": "douban://partial.douban.com/rexxar_demo/_.*"
     }
   ],
